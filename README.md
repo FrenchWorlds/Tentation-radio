@@ -2,7 +2,7 @@
 
 Bienvenue dans le projet Awesome ! Ce projet vise à résoudre [insérer ici le problème que résout votre projet].
 
-![Image d'aperçu](./img/)
+![Image d'aperçu](./img/9a741a3805456ded35ed2156a9ef8cc2.jpg)
 
 ## Table des matières
 
