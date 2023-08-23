@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>French Radio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/home.css' rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/list.css' rel='stylesheet'>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/dollar.css' rel='stylesheet'>
+  <link rel="shortcut icon" href="../img/9a741a3805456ded35ed2156a9ef8cc2.jpg" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Cadre en haut -->
+  <div class="header">
+    <!-- Premier burger -->
+    <a href="#" class="burger" id="burger">
+      <div class="bar bun-top"></div>
+      <div class="bar mustard"></div>
+      <div class="bar lettuce"></div>
+      <div class="bar ketchup"></div>
+      <div class="bar patty"></div>
+      <div class="bar mustard"></div>
+      <div class="bar bun-bot"></div>
+    </a>
+
+    <!-- Menu déroulant -->
+    <div class="menu" id="menu">
+      <!-- Ajoutez ici les liens ou éléments de votre menu -->
+      <a href="../index.html"><i class="gg-home"></i>Accueil</a>
+      <a href="../dashboard/dashboard.html"><i class="gg-list"></i></i>Dashboard</a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+          class="bi bi-currency-dollar" viewBox="0 0 16 16">
+          <path
+            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+        </svg>Premium</a>
+      <a href="https://discord.gg/yY8DGjHhaS"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+          <path
+            d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
+        </svg> Support</a>
+      <a
+        href="https://discord.com/api/oauth2/authorize?client_id=835509512017543168&permissions=8&scope=bot%20applications.commands"><svg
+          xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-robot"
+          viewBox="0 0 16 16">
+          <path
+            d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z" />
+          <path
+            d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z" />
+        </svg> Ajoute moi</a>
+      <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+        </svg> Github</a>
+      <div class="discord-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord"
+          viewBox="0 0 16 16">
+          <path
+            d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
+        </svg>
+        <span class="discord-text">Se connecter à Discord</span>
+      </div>
+
+    </div>
+
+    <!-- Titre centré -->
+    <h1>French Radio</h1>
+
+  </div>
+  <div class="main-container">
+    <div class="paragraph-container">
+      <div class="paragraph">
+        <h2>Passez au Premium pour une expérience incomparable</h2>
+        <div class="separator"></div>
+        <p>Chers auditeurs,
+
+          Vous adorez écouter la radio et rester branché sur les dernières nouvelles, les meilleurs morceaux
+          et
+          les émissions les plus captivantes ? Ne cherchez pas plus loin, notre offre Premium est faite pour
+          vous,
+          et voici pourquoi :
+        </p>
+      </div>
+      <div class="paragraph">
+        <h2>Une sélection étendue de stations</h2>
+        <div class="separator"></div>
+        <p>Nous avons élargi notre catalogue pour vous offrir un vaste choix de
+          stations de radio. Que vous aimiez la musique pop, le jazz, les actualités, ou encore les débats
+          politiques, notre offre Premium vous permet de découvrir de nouvelles stations qui correspondent
+          parfaitement à vos goûts.
+        </p>
+      </div>
+      <div class="paragraph">
+        <h2>24h/24, 7j/7</h2>
+        <div class="separator"></div>
+        <p>Avec notre formule Premium, vous pouvez profiter de vos stations de
+          radio favorites en tout temps, quelle que soit l'heure de la journée ou la journée de la semaine.
+          Plus
+          besoin d'attendre pour écouter vos émissions préférées, nous sommes là pour vous divertir à toute
+          heure
+          du jour et de la nuit.
+        </p>
+      </div>
+    </div>
+    <div class="card-container">
+      <!-- Carte 1 -->
+      <div class="card-list">
+        <div class="card-paragraph">
+          <h2>1 ans</h2>
+          <div class="separator"></div>
+          <ul>
+            <li>✅ 24h/24, 7j/7</li>
+            <li>✅ Plus de stations</li>
+            <li>✅ Support rapide</li>
+            <li>✅ 2 serveurs</li>
+          </ul>
+          <button class="glass-button">Cliquez ici</button>
+        </div>
+      </div>
+
+      <!-- Carte 2 -->
+      <div class="card-list">
+        <div class="card-paragraph">
+          <h2>9 mois</h2>
+          <div class="separator"></div>
+          <ul>
+            <li>✅ 24h/24, 7j/7</li>
+            <li>✅ Plus de stations</li>
+            <li>✅ Support rapide</li>
+            <li>✅ 1 serveur</li>
+          </ul>
+          <button class="glass-button">Cliquez ici</button>
+        </div>
+      </div>
+
+      <!-- Carte 3 -->
+      <div class="card-list">
+        <div class="card-paragraph">
+          <h2>6 mois</h2>
+          <div class="separator"></div>
+          <ul>
+            <li>✅ 24h/24, 7j/7</li>
+            <li>✅ Plus de stations</li>
+            <li>✅ Support rapide</li>
+            <li>✅ 1 serveur</li>
+          </ul>
+          <button class="glass-button">Cliquez ici</button>
+        </div>
+      </div>
+
+      <!-- Carte 4 -->
+      <div class="card-list">
+        <div class="card-paragraph">
+          <h2>3 mois</h2>
+          <div class="separator"></div>
+          <ul>
+            <li>✅ 24h/24, 7j/7</li>
+            <li>✅ Plus de stations</li>
+            <li>✅ Support rapide</li>
+            <li>✅ 1 serveur</li>
+          </ul>
+          <button class="glass-button">Cliquez ici</button>
+        </div>
+      </div>
+
+      <!-- Carte 5 -->
+      <div class="card-list">
+        <div class="card-paragraph">
+          <h2>1 mois</h2>
+          <div class="separator"></div>
+          <ul>
+            <li>✅ 24h/24, 7j/7</li>
+            <li>✅ Plus de stations</li>
+            <li>✅ Support rapide</li>
+            <li>✅ 1 serveur</li>
+          </ul>
+          <button class="glass-button">Cliquez ici</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <span>
+        <p>© 2023 french_world. Tous droits réservés.</p>
+      </span>
+      <nav>
+        <a href="#"><i class="gg-home"></i></a>
+        <a href="dashboard/dashboard.html"><i class="gg-list"></i></i></a>
+        <a href="premium/premium.html" class="premium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+            <path
+              d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+          </svg></a>
+        <a href="https://discord.gg/yY8DGjHhaS" class="discord"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+            <path
+              d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
+          </svg></a>
+        <a href="https://discord.com/api/oauth2/authorize?client_id=835509512017543168&permissions=8&scope=bot%20applications.commands"
+          class="discord"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+            class="bi bi-robot" viewBox="0 0 16 16">
+            <path
+              d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z" />
+            <path
+              d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z" />
+          </svg></a>
+        <a href="" class="github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+            class="bi bi-github" viewBox="0 0 16 16">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+          </svg></a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
