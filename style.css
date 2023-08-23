@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+* {
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+/* Styles pour le cadre en haut */
+.header {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #3B2D38;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Style pour le titre */
+.header h1 {
+    margin: 0;
+    /* Supprime toute marge externe pour éviter les interférences */
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    /*text-transform: uppercase;*/
+    letter-spacing: 2px;
+    text-shadow: 0 5px 1px rgba(0, 0, 0, 0.6);
+
+    /* Pour centrer horizontalement */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* La translation horizontale de -50% déplace le titre de moitié de sa propre largeur vers la gauche */
+}
+
+/* Styles pour les boutons */
+.header .buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+
+/* Styles pour le burger */
+
+a.burger {
+    display: flex;
+    bottom: 0;
+    height: 80px;
+    left: 20px;
+    /* Ajustez la valeur pour définir la position horizontale */
+    margin: 0;
+    position: absolute;
+    right: auto;
+    /* Enlever la valeur "auto" pour éviter le centrage automatique */
+    top: auto;
+    /* Ajustez la valeur pour définir la position verticale */
+    width: 75px;
+    cursor: pointer;
+}
+
+/* Styles pour les barres du burger */
+.bar {
+    background: white;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    transform-origin: 0 0;
+    transition: all 500ms;
+    width: 100%;
+}
+
+
+.bun-top {
+    transform: translate3d(0, 0, 0);
+}
+
+.lettuce {
+    transform: translate3d(0, -25px, 0) scaleY(0);
+    opacity: 0;
+}
+
+.mustard {
+    transform: translate3d(-75px, 0, 0) scaleY(0);
+    opacity: 0;
+}
+
+.ketchup {
+    transform: translate3d(75px, 0, 0) scaleY(0);
+    opacity: 0;
+}
+
+.patty {
+    transform: translate3d(0, 15px, 0);
+}
+
+.bun-bot {
+    transform: translate3d(0, 30px, 0);
+}
+
+/* Styles pour le burger au survol ou clic */
+.burger.on .bar {
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+}
+
+.burger.on .bun-top {
+    background: #d7b48a;
+    transform: translate3d(0, 0, 0) scaleY(1.5);
+}
+
+.burger.on .lettuce {
+    background: #62c852;
+    transform: translate3d(0, 20px, 0) scaleY(0.5);
+    opacity: 1;
+    transition-delay: 200ms;
+}
+
+.burger.on .mustard {
+    background: #e5e360;
+    transform: translate3d(0, 30px, 0) scaleY(0.5);
+    opacity: 1;
+    transition-delay: 400ms;
+}
+
+.burger.on .ketchup {
+    background: #ce4a4a;
+    transform: translate3d(0, 40px, 0) scaleY(0.5);
+    opacity: 1;
+    transition-delay: 600ms;
+}
+
+.burger.on .patty {
+    background: #3d362a;
+    transform: translate3d(0, 50px, 0) scaleY(1);
+}
+
+.burger.on .bun-bot {
+    background: #d7b48a;
+    transform: translate3d(0, 65px, 0) scaleY(1.5);
+}
+
+/* Styles pour le menu déroulant */
+.menu {
+    position: fixed;
+    top: 90px;
+    /* Ajustez la valeur pour définir la position verticale du menu */
+    left: -200px;
+    /* Fait sortir le menu de la gauche */
+    width: 200px;
+    /* Ajustez la valeur pour définir la largeur du menu */
+    height: auto;
+    /* Ajustez la valeur pour définir la hauteur du menu */
+    background-color: #797676;
+    /* Couleur du menu déroulant */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Aligne le contenu à gauche */
+    transition: left 0.5s ease;
+    background: linear-gradient(135deg, #9B59B6, #6C3483);
+    /* Dégradé linéaire avec les couleurs violettes */
+    backdrop-filter: blur(5px);
+    /* Flou du fond */
+
+    /* Position au-dessus des autres éléments */
+    z-index: 2;
+}
+
+
+/* Styles pour le triangle rectangle */
+.menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    /* Place le triangle en haut du menu déroulant */
+    left: -20px;
+    /* Place le triangle à gauche du menu déroulant */
+    border-top: 20px solid transparent;
+    /* Hauteur du triangle */
+    border-right: 20px solid #797676;
+    /* Largeur du triangle */
+    border-bottom: 20px solid #797676;
+    /* Hauteur du triangle */
+    border-left: none;
+    /* Pas de bordure à gauche pour l'angle droit */
+}
+
+/* Styles pour les liens du menu */
+.menu a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 20px;
+    margin: 10px;
+    display: flex;
+    /* Utiliser flexbox pour aligner le contenu */
+    align-items: center;
+    /* Centrer verticalement le contenu */
+}
+
+/* Styles pour l'icône */
+.menu i {
+    margin-right: 10px;
+    /* Marge à droite pour l'espace entre l'icône et le texte */
+}
+
+/* Styles pour l'icône */
+.menu svg {
+    margin-right: 10px;
+    /* Marge à droite pour l'espace entre l'icône et le texte */
+}
+
+/* Styles supplémentaires pour le menu déroulant lorsque le burger est en état "ouvert" */
+.burger.on+.menu {
+    left: 0;
+    /* Fait apparaître le menu déroulant */
+}
+
+
+.paragraph h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 10px 0;
+}
+
+.paragraph p {
+    font-size: 16px;
+}
+
+/* Styles pour les cartes dans le paragraph container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Styles for the cards in the paragraph container */
+.card-paragraph {
+    width: 200px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(60px);
+    padding: 20px;
+    color: white;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Align items vertically */
+    align-items: center;
+    /* Align items horizontally */
+}
+
+.discord-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7289da;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.discord-logo {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    fill: currentColor;
+}
+
+.discord-text {
+    line-height: 1;
+}
+
+.discord-button:hover {
+    background-color: #677bc4;
+    transform: translateY(-2px);
+}
+
+.glass-button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+.glass-button span {
+    position: relative;
+    z-index: 2;
+}
+
+.glass-button:hover span {
+    color: transparent;
+    /* Set the text color to transparent on hover */
+    background-image: linear-gradient(90deg, yellow, white);
+    /* Add a gradient to create the light-up effect */
+    background-clip: text;
+    /* Use text as the background clip */
+    -webkit-background-clip: text;
+    /* For Safari compatibility */
+    animation: lightUpText 2s infinite;
+    /* Add the animation */
+}
+
+
+.glass-button .letter {
+    display: inline-block;
+    color: transparent;
+    background-image: linear-gradient(90deg, yellow, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 1;
+}
+
+@keyframes lightUpText {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.glass-button:hover .letter {
+    animation: lightUpText 2s steps(7) infinite;
+}
+
+/* Styles for the container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+    /* Occupy the full width */
+}
+
+/* Styles for the paragraphs */
+.paragraph-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.paragraph {
+    max-width: 400px;
+    /* Maximum width for the paragraph container */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(60px);
+    padding: 20px;
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Styles for the add button container */
+.add-container {
+    width: 100%;
+    /* Occupy the full width */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.add-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    /* Remove the text decoration for the link */
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px 2px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.add-button a {
+    /* Apply styles for the link inside the button */
+    text-decoration: none;
+    color: #fff;
+}
+
+.add-button svg {
+    margin-right: 10px;
+}
+
+.add-button:hover {
+    background-color: #677bc4;
+    transform: translateY(-2px);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Empêche les barres de défilement */
+  }
+  
+  footer {
+    background-color: #3B2D38;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-content p {
+    font-size: 14px;
+    color: white;
+    margin: 0 10px;
+  }
+  
+  footer nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer nav a {
+    text-decoration: none;
+    color: rgb(119, 119, 119);
+    margin: 0 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer nav a.discord:hover {
+    color: #7289DA;
+  }
+  
+  footer nav a.github:hover {
+    color: rgb(24, 20, 20);
+  }
+  
+  footer nav a.premium:hover {
+    color: #eef104;
+  }
+  footer nav a.games:hover {
+    color: #1900ff;
+  }
