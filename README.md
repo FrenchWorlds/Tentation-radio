@@ -1,6 +1,6 @@
 # Projet Awesome
 
-Bienvenue dans le projet Awesome ! Ce projet vise à résoudre [insérer ici le problème que résout votre projet].
+Bienvenue dans le projet French World !
 
 ![Image d'aperçu](./img/9a741a3805456ded35ed2156a9ef8cc2.jpg)
 
