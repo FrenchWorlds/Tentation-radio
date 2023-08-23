@@ -1,4 +1,4 @@
-# Projet Awesome
+# Projet French World
 
 Bienvenue dans le projet French World !
 
