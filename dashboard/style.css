@@ -253,7 +253,7 @@ a.burger {
     padding: 20px;
     color: white;
     margin: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 .paragraph h2 {
@@ -294,9 +294,9 @@ a.burger {
     margin: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     /* Align items vertically */
-    align-items: center;
+    align-items: left;
     /* Align items horizontally */
 }
 
@@ -333,9 +333,10 @@ a.burger {
 
 /* Styles for the add button container */
 .add-container {
-    width: 100%; /* Occupy the full width */
+    width: 100%;
+    /* Occupy the full width */
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-top: 20px;
 }
 
@@ -347,7 +348,8 @@ a.burger {
     justify-content: center;
     padding: 15px 20px;
     text-align: center;
-    text-decoration: none; /* Remove the text decoration for the link */
+    text-decoration: none;
+    /* Remove the text decoration for the link */
     font-size: 20px;
     font-weight: bold;
     margin: 4px 2px;
@@ -375,52 +377,72 @@ a.burger {
     background-color: #677bc4;
     transform: translateY(-2px);
 }
-  
-  footer {
+
+footer {
     background-color: #3B2D38;
     padding: 20px;
     text-align: center;
     width: 100%;
     position: absolute;
     bottom: 0;
-  }
-  
-  .footer-content {
+}
+
+.footer-content {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-  }
-  
-  .footer-content p {
+}
+
+.footer-content p {
     font-size: 14px;
     color: white;
     margin: 0 10px;
-  }
-  
-  footer nav {
+}
+
+footer nav {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  footer nav a {
+}
+
+footer nav a {
     text-decoration: none;
     color: rgb(119, 119, 119);
     margin: 0 10px;
     align-items: center;
     justify-content: center;
-  }
-  
-  footer nav a.discord:hover {
+}
+
+footer nav a.discord:hover {
     color: #7289DA;
-  }
-  
-  footer nav a.github:hover {
+}
+
+footer nav a.github:hover {
     color: rgb(24, 20, 20);
-  }
-  
-  footer nav a.premium:hover {
+}
+
+footer nav a.premium:hover {
     color: #eef104;
-  }
-  
+}
+
+/* Style for the button at the bottom of the card */
+.glass-button {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+    position: relative;
+}
+
+.glass-button:hover {
+    border: solid 2px grey;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
