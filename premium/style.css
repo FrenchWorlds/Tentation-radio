@@ -397,3 +397,7 @@ footer {
   footer nav a.premium:hover {
     color: #eef104;
   }
+
+  footer .fthome:hover, .ftdashborad:hover, .ftpremium:hover, .ftaddbot:hover, .ftgithub:hover, .ftsupport:hover {
+    color: burlywood;
+  }
