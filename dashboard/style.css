@@ -446,3 +446,7 @@ footer nav a.premium:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: translateY(-3px);
 }
+
+  footer .fthome:hover, .ftdashborad:hover, .ftpremium:hover, .ftaddbot:hover, .ftgithub:hover, .ftsupport:hover {
+    color: burlywood;
+  }
