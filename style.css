@@ -511,3 +511,7 @@ html, body {
   footer nav a.games:hover {
     color: #1900ff;
   }
+
+  footer .fthome:hover, .ftdashborad:hover, .ftpremium:hover, .ftaddbot:hover, .ftgithub:hover, .ftsupport:hover {
+    color: burlywood;
+  }
