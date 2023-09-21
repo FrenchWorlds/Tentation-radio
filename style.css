@@ -453,13 +453,6 @@ a.burger {
     background-color: #677bc4;
     transform: translateY(-2px);
 }
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Empêche les barres de défilement */
-  }
   
   footer {
     background-color: #3B2D38;
@@ -510,6 +503,11 @@ html, body {
   }
   footer nav a.games:hover {
     color: #1900ff;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: white;
   }
 
   footer .fthome:hover, .ftdashborad:hover, .ftpremium:hover, .ftaddbot:hover, .ftgithub:hover, .ftsupport:hover {
