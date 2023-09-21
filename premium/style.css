@@ -351,11 +351,12 @@ a.burger {
   transform: translateY(-2px);
 }
 
-footer {
+  footer {
     background-color: #3B2D38;
     padding: 20px;
     text-align: center;
     width: 100%;
+    position: absolute;
     bottom: 0;
   }
   
@@ -396,6 +397,9 @@ footer {
   
   footer nav a.premium:hover {
     color: #eef104;
+  }
+  footer nav a.games:hover {
+    color: #1900ff;
   }
 
   footer .fthome:hover, .ftdashborad:hover, .ftpremium:hover, .ftaddbot:hover, .ftgithub:hover, .ftsupport:hover {
